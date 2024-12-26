@@ -1,5 +1,3 @@
-Certainly! Below is a `README.md` file with a tab-like structure to guide users through setting up the PHP application with Docker Compose for both **Linux** and **Windows**.
-
 ```markdown
 # PHP Application with Docker Compose
 
