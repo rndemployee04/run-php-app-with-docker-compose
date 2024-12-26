@@ -230,5 +230,4 @@ This will start a bash shell inside the running container, allowing you to debug
 
 - With this guide, you can easily run a PHP application using Docker Compose on both **Linux** and **Windows** systems. By following the steps outlined here, you will have a portable setup for PHP and MySQL, with the ability to configure settings via environment variables for different environments (e.g., development, production).
 
-- To manage your database you can use MySql CLI or MySql Workbench
-```
+- To manage your database you can use MySql CLI or MySql Workbench.
