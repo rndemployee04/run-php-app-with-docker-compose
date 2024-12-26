@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  web:
+    image: php:8.1-apache
+    container_name: php-app
+    ports:
+      - "${PHP_PORT:-80}:80"  # Allows overriding the port with the PHP_PORT environment variable, default is 80
+    volumes:
+      - ./src:/var/www/html  # Mounts the source code directory to the web server
+    environment:
+      - PHP_DISPLAY_ERRORS=${PHP_DISPLAY_ERRORS:-On}  # Default to 'On' if not specified
+      - PHP_ERROR_LOG=${PHP_ERROR_LOG:-/var/log/php/error.log}  # Default log path
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  db:
+    image: mysql:5.7
+    container_name: php-db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-rootpassword}  # Default root password
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-app_db}  # Default database name
+      MYSQL_USER: ${MYSQL_USER:-user}  # Default MySQL user
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-password}  # Default user password
+    volumes:
+      - db-data:/var/lib/mysql  # Persist database data between restarts
+    networks:
+      - app-network
+    restart: unless-stopped
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db-data:
+    driver: local
