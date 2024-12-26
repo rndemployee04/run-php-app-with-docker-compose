@@ -24,9 +24,9 @@ Before you begin, ensure the following:
 
 - **Docker** and **Docker Compose** installed on your machine.
   - [Install Docker on Linux](https://docs.docker.com/engine/install/)
-  - [Install Docker Desktop on Windows](https://www.docker.com/products/docker-desktop)
+  - [Install Docker Desktop on Windows](https://www.docker.com/get-started/)
 - **Docker Desktop** configured to use **Linux containers** on Windows.
-- **Linux** or **Windows Subsystem for Linux (WSL 2)** for running Docker on Windows.
+- **Linux** or **Windows Subsystem for Linux (WSL 2)** for running Docker on Windows.[Here](https://learn.microsoft.com/en-us/windows/wsl/install)
 
 ---
 
@@ -230,4 +230,4 @@ This will start a bash shell inside the running container, allowing you to debug
 
 - With this guide, you can easily run a PHP application using Docker Compose on both **Linux** and **Windows** systems. By following the steps outlined here, you will have a portable setup for PHP and MySQL, with the ability to configure settings via environment variables for different environments (e.g., development, production).
 
-- To manage your database you can use MySql CLI or MySql Workbench.
+- To manage your database you can use MySQL CLI or MySQL Workbench.
