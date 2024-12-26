@@ -1,4 +1,3 @@
-```markdown
 # PHP Application with Docker Compose
 
 This guide will help you set up and run a PHP application using Docker Compose on both **Linux** and **Windows** environments.
